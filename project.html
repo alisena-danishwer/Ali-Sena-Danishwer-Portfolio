@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding-top: 70px; /* To prevent content from hiding under the fixed header */
+            padding-bottom: 0px; /* Ensures content isn't hidden under the footer */
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Hamburger menu - hidden on larger screens */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            left: 20px;
+            margin-top: 0;
+            
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Initially hide */
+                flex-direction: column;
+                background: #3b5bfd;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block; /* Show hamburger */
+            }
+
+            /* Show menu when active */
+            .nav-links.nav-active {
+                display: flex;
+            }
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: background 0.3s ease, color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        header nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+         }
+        }
+
+        
+
+        /* Main Content */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        /* Project Section */
+        .project-section {
+            width: 90%;
+            max-width: 1100px;
+            min-height: 250px;
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            padding: 30px;
+            margin: 20px auto; /* Centers the section */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* Projects Section */
+        .projects {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-item {
+            text-align: justify;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .project-item h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .project-item p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./About.html">About</a>
+                <a href="./project.html">Projects</a>
+                <a href="./services.html">Services</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-section">
+            <h1>My Projects</h1>
+        </div>
+    </main>
+
+    <section class="projects">
+        <h2>Recently Done Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="./images/Learning Managment System ( EduPathway).jpg" alt="Learning Management System (EduPathway)">
+                <h3>Learning Management System (LMS)</h3>
+                <p>This system helps universities manage courses, student profiles, and operations efficiently.</p>
+            </div>
+            <div class="project-item">
+                <img src="./images/Student Profile.png" alt="Student Profile">
+                <h3>Student Profile Management</h3>
+                <p>A web-based system for students to manage their profiles, track progress, and update personal data.</p>
+            </div>
+            <!--Project 3-->
+            <div class="project-item">
+                <img src="./images/Retail-Store.png" alt="Retail store management system">
+                <h3>Retail Store Management System</h3>
+                <p>A powerful system to manage inventory, sales, and customer data for small and medium-sized retial business. </p>   
+            </div>
+            <!--Project 4-->
+            <div class="project-item">
+                <img src="./images/calculator.png" alt="Danishwer Scientific Calculator">
+                <h3>Danishwer Scientific Calculator</h3>
+                <p>An advanced calculaor capable of perfoming complex scientific and mathematical calculations with ease.</p>
+            </div>
+            <!--Project 5-->
+            <div class="project-item">
+                <img src="./images/Quiz-Challenge.png" alt=" Quiz Challenge">
+                <h3>Quiz Challenge App</h3>
+                <p> A fun and interactive quiz application that allows users to test their knowledge on various topics</p>
+            </div>
+            <!---Project 6-->
+            <div class="project-item">
+                <img src="./images/Tempreature-Converter.png" alt="Temperature Converter">
+                <h3>Temperature Converter</h3>
+                <p>A simple yet effective tool to convert temperatures between Celsius, Fahrenheit, and Kelvin scales.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ali Sena Danishwer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Sena Danishwer Portfolio - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Three Lines Button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    
+        <!-- Navigation Menu -->
+        <nav id="nav-menu">
+            <a href="./index.html">Home</a>
+            <a href="./About.html">About</a>
+            <a href="project.html">Project</a>
+            <a href="services.html">Services</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    
+
+<main>
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <div class="intro-content">
+                <div class="text">
+                    
+                    <h1>Ali Sena Danishwer</h1>
+                    <p class="description">
+                        Ali Sena Danishwer is a multifaceted professional who has established himself in diverse fields, demonstrating remarkable versatility and expertise.
+                        As a <b>front-end web developer</b>, he specializes in creating visually engaging and user-friendly web interfaces, leveraging his skills in technologies like
+                        <b>HTML, CSS, JavaScript</b>, and modern front-end frameworks.
+                    </p>
+                    <p>
+                        Certified as a <b>PCEP (Python Certified Entry-Level Programmer)</b>, Ali Sena has a solid foundation in Python programming.
+                        This certification reflects his competence in the fundamental aspects of <b>Python</b>, including data structures, basic algorithms, and scripting.
+                    </p>
+                    <p>
+                        In addition to his technical acumen, Ali Sena is a <b>Writer and a passionate Debater</b>, known for his eloquence and critical thinking.
+                    </p>
+                    <p>
+                        Ali Sena is also an <b>Author</b>, celebrated for his book, <b>A World of English Grammar</b>.
+                    </p>
+                    <p>
+                        As an <b>ESL (English as a Second Language) instructor</b> and a <b>Mathematics teacher</b>, Ali Sena has made significant contributions to education.
+                    </p>
+                    <p>
+                        Ali Sena Danishwer exemplifies the fusion of technology, education, and creativity, inspiring others through his diverse talents and unwavering commitment to excellence.
+                    </p>
+                    <a href="./index.html" class="btn">Discover now</a>
+                </div>
+                <div class="image-container">
+                    <div class="image-frame"></div>
+                    <img src="./images/Alisenada.png" alt="Ali Sena">
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <section class="projects">
+            <h2>Recently Done Projects</h2>
+            <div class="project-grid">
+                <!--Project 1-->
+                <div class="project-item">
+                    <img src="./images/Learning Managment System ( EduPathway).jpg" alt="Learning Management System (EduPathway)">
+                    <h3>Learning Management System (LMS) </h3>
+                    <p>This learning management system is designed to streamline university operations, offering course managemnt, student profiles, and more.</p>
+                </div>
+                <!--Project 2-->
+                <div class="project-item">
+                    <img src="./images/Student Profile.png" alt="Student Profile">
+                    <h3>Student Profile Management</h3>
+                    <p>A web-based system that allows students to manage their profiles, track progress, and update personal data efficiently.</p>
+                </div>
+                <!--Project 3-->
+                <div class="project-item">
+                    <img src="./images/Retail-Store.png" alt="Retail store management system">
+                    <h3>Retail Store Management System</h3>
+                    <p>A powerful system to manage inventory, sales, and customer data for small and medium-sized retial business. </p>   
+                </div>
+                <!--Project 4-->
+                <div class="project-item">
+                    <img src="./images/calculator.png" alt="Danishwer Scientific Calculator">
+                    <h3>Danishwer Scientific Calculator</h3>
+                    <p>An advanced calculaor capable of perfoming complex scientific and mathematical calculations with ease.</p>
+                </div>
+                <!--Project 5-->
+                <div class="project-item">
+                    <img src="./images/Quiz-Challenge.png" alt=" Quiz Challenge">
+                    <h3>Quiz Challenge App</h3>
+                    <p> A fun and interactive quiz application that allows users to test their knowledge on various topics</p>
+                </div>
+                <!---Project 6-->
+                <div class="project-item">
+                    <img src="./images/Tempreature-Converter.png" alt="Temperature Converter">
+                    <h3>Temperature Converter</h3>
+                    <p>A simple yet effective tool to convert temperatures between Celsius, Fahrenheit, and Kelvin scales.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="Services">
+        <h2>My services</h2>
+        <div class="service-grid">
+            <!--Service 1-->
+            <div class="service-item">
+                <img src="./images/front-end.png" alt="Web Development">
+                <h3> Web Devlopement</h3>
+            </div>
+            <!---Service 2-->
+            <div class="service-item">
+                <img src="./images/translation.jpg" alt="Translation Services">
+                <h3> Translation Services</h3>
+                <p> Translating services from English to Dari Language </p>
+            </div>
+            <!--Services 3-->
+            <div class="service-item">
+                <img src="./images/public-speaking.JPG" alt="Public Speaking">
+                <h3> Public Speaking</h3>
+
+            </div>
+        </div>
+    </section>
+<!-- Contact Section -->
+<section class="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-grid">
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="POST" class="contact-form">
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Your Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Message Input -->
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="follow Me">
+    <h2> Follow Me </h2>
+    <div class="follow-grid">
+        <a href="https://www.linkedin.com/in/ali-sena-danishwer-346a88280/" target="Linkedin">
+            <img src="./images/Linkedin.png">
+
+        </a>
+        <a href="https://www.facebook.com/alisena.danishwer24?mibextid=ZbWKwL" target="Facebook">
+            <img src="./images/facebook.png" alt="facebook">
+
+        </a>
+        <a href="https://x.com/AlisenaDanishwr?t=HTnMvDgthR_9-10Gcm_cUA&s=09" target="X">
+            <img src="./images/x.png" alt="x">
+        </a>
+        <a href="https://www.instagram.com/alisena.danishwer/?igsh=MTAweDRwa21mZmJhMQ%3D%3D#" target="Instagram">
+            <img src="./images/Instagram.jpg" alt="instagram">
+
+        </a>
+
+    </div>
+    
+</section>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Ali Sena Danishwer. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

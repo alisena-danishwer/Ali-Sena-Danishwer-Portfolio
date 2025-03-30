@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ali Sena Danishwer</title>
+    <style>
+        /* ===== Base Styles ===== */
+        :root {
+            --primary-gradient: linear-gradient(to right, #3b5bfd, #8752f7);
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            background: #f5f5f5;
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== Header Styles ===== */
+       /* Header styles */
+header {
+    background: var(--primary-gradient);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation links list */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation link items */
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Active state */
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+}
+
+/* Focus state */
+.nav-links a:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Content spacing (add to your main content) */
+main {
+    margin-top: 80px; /* Should match header height */
+    min-height: calc(100vh - 80px); /* Adjust if needed */
+}
+
+
+
+        /* ===== Mobile Navigation ===== */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: fixed;
+            left: 1rem;
+            top: 0; /* Adjusted from top: 0 */
+            z-index: 1100; /* Ensure it stays above header */
+            
+            
+        }
+
+        #nav-menu a {
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            transition: background 0.3s ease-in-out;
+         }
+
+        #nav-menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+         }
+        }
+
+        
+        
+        /* Add these adjustments to your existing media queries */
+        @media (max-width: 768px) {
+            /* Improve mobile menu positioning */
+            header {
+                padding: 1rem 0; /* Add horizontal padding */
+                position: fixed; /* Change from fixed if needed */
+            }
+        
+            .nav-links {
+                top: 3.5rem; /* Adjust based on header height */
+            }
+        
+            /* Fix image responsiveness */
+            img {
+                width: 100%;
+                max-width: 250px;
+                height: auto;
+                float: none;
+                display: block;
+                margin: 1rem auto;
+            }
+        
+            /* Improve content spacing */
+            main {
+                margin-top: 1rem;
+                padding: 0.1rem;
+            }
+        
+            h2 {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Further mobile adjustments */
+            .menu-toggle {
+                font-size: 1.2rem;
+                left: 0.8rem;
+                top: 0.09rem;
+            }
+        
+            img {
+                max-width: 200px;
+            }
+        
+            .about-section h1 {
+                font-size: 1.5rem;
+            }
+        
+            p {
+                font-size: 0.9rem;
+                text-align: left;
+            }
+        }
+
+        
+
+        /* ===== Hero Section ===== */
+        .about-section {
+            width: 100%;
+            background: var(--primary-gradient);
+            color: var(--text-light);
+            padding: 90px;
+            border-radius: 0 0 20px 20px;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* ===== Main Content ===== */
+        main {
+            flex: 1;
+            max-width: 900px;
+            width: 90%;
+            margin: 2rem auto;
+            padding: 20px;
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            float: right;
+            margin: 0 0 15px 20px;
+            border: 5px solid #ddd;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: #34495E;
+            margin-top: 40px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 12px;
+            margin: 1rem 0;
+            line-height: 1.7;
+        }
+
+        b {
+            color: #1E90FF;
+        }
+
+        /* ===== Footer Styles ===== */
+        footer {
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            color: white;
+            padding: 0px;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            font-size: 12px;
+            
+        }
+
+        /* ===== Responsive Design ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-gradient);
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+    `        }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .about-section {
+                margin-top: 80px;
+                padding: 1.5rem;
+            }
+
+            .about-section h1 {
+                font-size: 2rem;
+            }
+
+            img {
+                width: 180px;
+                height: 180px;
+                float: none;
+                margin: 15px auto;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section {
+                margin-top: 90px;
+                padding: 1rem;
+            }
+
+            .about-section h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                text-align: center;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+            }
+
+            p {
+                font-size: 0.9375rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./project.html">Projects</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-section">
+            <h1>About Me</h1>
+        </div>
+        
+        <h2>Hello! I'm Ali Sena Danishwer</h2>
+  
+        <img src="./images/Alisena.jpg" alt="Photo of Ali Sena Danishwer">
+        
+        <p>
+            Ali Sena Danishwer is a multifaceted professional who has established himself in diverse fields, demonstrating remarkable versatility and expertise.
+            As a <b>front-end web developer</b>, he specializes in creating visually engaging and user-friendly web interfaces, leveraging his skills in technologies like
+            <b>HTML, CSS, JavaScript</b>, and modern front-end frameworks.
+        </p>
+
+        <p>
+            Certified as a <b>PCEP (Python Certified Entry-Level Programmer)</b>, Ali Sena has a solid foundation in Python programming.
+            His certification reflects his competence in <b>data structures, basic algorithms, and scripting</b>.
+        </p>
+
+        <p>
+            In addition to his technical skills, Ali Sena is a <b>Writer and a passionate Debater</b>, known for his eloquence and critical thinking.
+            His writing blends creativity with intellectual depth.
+        </p>
+
+        <p>
+            Ali Sena is also an <b>Author</b>, celebrated for his book, <b>A World of English Grammar</b>.
+            The book serves as a comprehensive guide for English language learners.
+        </p>
+
+        <p>
+            As an <b>ESL instructor</b> and a <b>Mathematics teacher</b>, Ali Sena has made significant contributions to education.
+            His teaching emphasizes clarity and engagement.
+        </p>
+
+        <p>
+            Ali Sena Danishwer exemplifies the fusion of technology, education, and creativity, inspiring others through his diverse talents.
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ali Sena Danishwer. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+
+                function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
