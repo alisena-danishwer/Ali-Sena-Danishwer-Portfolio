@@ -343,7 +343,409 @@
     <h2>Contact Me</h2>
     <div class="contact-grid">
         <!-- Contact Form -->
-        <form action="submit_form.php" method="POST" class="contact-form">
+        <form action="<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding-top: 70px; /* To prevent content from hiding under the fixed header */
+            padding-bottom: 0px; /* Ensures content isn't hidden under the footer */
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Hamburger menu - hidden on larger screens */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            left: 20px;
+            margin-top: 0;
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Initially hide */
+                flex-direction: column;
+                background: #3b5bfd;
+                position: absolute;
+                top: 25px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block; /* Show hamburger */
+            }
+
+            /* Show menu when active */
+            .nav-links.nav-active {
+                display: flex;
+            }
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: background 0.3s ease, color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        header nav a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+         }
+         
+/* Main Content */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    text-align: center;
+    background-color:;
+ }
+ .contact-grid {
+    max-width: 600px;
+    margin: 0 auto;
+    
+ }
+ .form-group {
+    margin-bottom: 15px;
+ }
+ label {
+    display: block;
+    margin-bottom: 5px;
+ }
+ input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+ }
+ button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+ }
+ button:hover {
+    background-color: #0056b3;
+ }
+ 
+ .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+ 
+ .contact-form {
+    width: 100%;
+ }
+ /* follow me section */
+ 
+ .follow-me {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: 30px;
+    
+ 
+ }
+
+ h2 {
+    text-align: center;
+ }
+ 
+ .follow-grid {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+ 
+ .follow-grid img {
+    width: 50px;  /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%; /* Make icons circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .follow-grid a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+ }
+ 
+ .follow-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+ }
+ 
+ .follow-grid a img {
+    width: 40px;
+    height: 40px;
+ }
+ 
+ 
+ /* Hover effect */
+ .follow-grid a:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+
+        /* contact Section */
+        .project-section {
+            width: 90%;
+            max-width: 1100px;
+            min-height: 250px;
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            padding: 30px;
+            margin: 20px auto; /* Centers the section */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* Projects Section */
+        .projects {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-item {
+            text-align: justify;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .project-item h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .project-item p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+
+
+        /* Footer Styling */
+        footer {
+            background: linear-gradient(to right, #3b5bfd, #8752f7);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./About.html">About</a>
+                <a href="./project.html">Projects</a>
+                <a href="./services.html">Services</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-section">
+            <h1>Contact Me</h1>
+        </div>
+    </main>
+</main>
+<!-- Contact Section -->
+<section class="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-grid">
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xdkewanw" method="POST">
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Your Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Message Input -->
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="follow Me">
+    <h2> Follow Me </h2>
+    <div class="follow-grid">
+        <a href="https://www.linkedin.com/in/ali-sena-danishwer-346a88280/" target="Linkedin">
+            <img src="./images/Linkedin.png">
+
+        </a>
+        <a href="https://www.facebook.com/alisena.danishwer24?mibextid=ZbWKwL" target="Facebook">
+            <img src="./images/facebook.png" alt="facebook">
+
+        </a>
+        <a href="https://x.com/AlisenaDanishwr?t=HTnMvDgthR_9-10Gcm_cUA&s=09" target="X">
+            <img src="./images/x.png" alt="x">
+        </a>
+        <a href="https://www.instagram.com/alisena.danishwer/?igsh=MTAweDRwa21mZmJhMQ%3D%3D#" target="Instagram">
+            <img src="./images/Instagram.jpg" alt="instagram">
+
+        </a>
+
+    </div>
+    
+</section>
+    
+
+    <footer>
+        <p>&copy; 2025 Ali Sena Danishwer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active');
+        }
+    </script>
+
+</body>
+</html>" method="POST" class="contact-form">
             <!-- Email Input -->
             <div class="form-group">
                 <label for="email">Your Email Address:</label>
