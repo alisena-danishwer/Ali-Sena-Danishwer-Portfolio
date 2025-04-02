@@ -193,6 +193,48 @@
             const menu = document.getElementById('nav-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            // Intro Section Animation
+            let introSection = document.querySelector(".intro");
+            introSection.style.opacity = "0";
+            introSection.style.transform = "translateY(-50px)";
+            introSection.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+        
+            setTimeout(() => {
+                introSection.style.opacity = "1";
+                introSection.style.transform = "translateY(0)";
+            }, 200);
+        
+            // Header Animation (Appears smoothly)
+            let header = document.querySelector("header");
+            header.style.opacity = "0";
+            header.style.transition = "opacity 1s ease-in-out";
+            setTimeout(() => {
+                header.style.opacity = "1";
+            }, 300);
+        
+            // Project Cards Animation (On Scroll)
+            let projectItems = document.querySelectorAll(".project-item");
+            function revealProjects() {
+                projectItems.forEach((item) => {
+                    let position = item.getBoundingClientRect().top;
+                    let screenHeight = window.innerHeight;
+                    if (position < screenHeight - 50) {
+                        item.style.opacity = "1";
+                        item.style.transform = "scale(1)";
+                    }
+                });
+            }
+        
+            projectItems.forEach((item) => {
+                item.style.opacity = "0";
+                item.style.transform = "scale(0.9)";
+                item.style.transition = "opacity 0.5s ease-out, transform 0.5s ease-out";
+            });
+        
+            window.addEventListener("scroll", revealProjects);
+        });
+        
     </script>
 </body>
 </html>
